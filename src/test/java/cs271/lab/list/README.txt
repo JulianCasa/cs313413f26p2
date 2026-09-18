@@ -17,3 +17,23 @@ i.remove(); // TODO Question: What happens if you use list.remove(Integer.valueO
         If the method is called within the provided while loop, the program breaks because all
         the instances of the integer 77 are removed in the first loop. If implemented ouyside a loop
         it removes all instances of 77 at once
+
+//TestPerformance TODO Questions
+//TODO run test and record running times for SIZE = 10, 100, 1000, 10000, ...
+  // (choose in conjunction with REPS below up to an upper limit where the clock
+  // running time is in the tens of seconds)
+  SIZE = 10, REPS = 1000000: 621 ms
+  SIZE = 100, REPS = 1000000: 655 ms
+  SIZE = 1000, REPS = 1000000: 1 sec 178 ms
+  SIZE = 100000, REPS = 1000000; 1 min 27 sec
+  SIZE = 1000, REPS = 10000000: 12 sec 565 ms --> The upper limit where the runtime is the 10s of seconds
+  SIZE = 1000, REPS = 100000000: 1 min 50 sec
+
+
+// TODO Question: What conclusions can you draw about the performance of LinkedList vs. ArrayList when
+  // comparing their running times for AddRemove vs. Access? Record those running times in README.txt!
+
+    When comparing the two, it seems that linked list add/remove is faster when compared to the arraylist
+    add/remove (987 ms vs 1 min 4 sec @ SIZE = 1000 + REPS = 100000000). Conversely, Linked list access
+    is slower when compared to the arraylist access (43 sec 318 ms vs 300 ms @ SIZE = 1000 +
+    REPS = 100000000) This behavior is consistent at other size and rep values as well
